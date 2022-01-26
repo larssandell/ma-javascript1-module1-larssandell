@@ -83,6 +83,7 @@ function list() {
 }
 list();
 
+
 console.log("-------------------- [Question 8] ---------------------------");
 // Question 8:
 // Create a function called createCats. The function will have one parameter called cats.
