@@ -1,3 +1,5 @@
+
+
 console.log("-------------------- [Question 1] ---------------------------");
 // Question 1:
 // Create an object called cat.
@@ -62,7 +64,6 @@ console.log("-------------------- [Question 7] ---------------------------");
 // Create a function that has one parameter called list.
 // Inside the function, loop through the list parameter and console log the name property in each object.
 // Call the function and pass in the cats variable in the script.js file in the repo.
-
 const cats = [
     {
         name: "Blob",
@@ -94,8 +95,15 @@ console.log("-------------------- [Question 8] ---------------------------");
 // Call the function and pass in the cats array as the argument.
 // Assign the return value of the function to the innerHTML property of the element on the HTML page with a class of cat-container.
 
-function createCats(cats) {
-    for(let i = 0; i < cats.length; i++) {
-        
+  function createCats(cats) {
+    let html = "";
+    for (let i = 0; i < cats.length; i++) {
+      let objUnknown = "Age Unknown";
+      if (cats[i].age) {
+        objUnknown = cats[i].age;
+      }
+      html += document.querySelector(".cat-container").innerHTML += `<div> <h5>${cats[i].name}</h5><p>${objUnknown}</p></div>`;
     }
-}
+    return html;
+  }
+  createCats(cats);
